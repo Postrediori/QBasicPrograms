@@ -360,6 +360,11 @@ Simulations of particle scattering with RNG.
 
 ## Miscellaneous
 
+**[BURN.BAS](BURN.BAS)** - ["Burning"](https://www.pouet.net/prod.php?which=88237) demo from [pouet.net](https://www.pouet.net/). `CALL` runs x86 bytecode encoded as string characters.
+
+![BURN Screenshot](images/BURN.png)
+
+
 **[FIBSPRL.BAS](FIBSPRL.BAS)** - Fibonacci spiral with different color for each individual spiral.
 
 ![FIBSPRL Screenshot](images/FIBSPRL.png)
