@@ -1,0 +1,10 @@
+' Sierpinski cellular automaton
+SCREEN 12
+PSET(0,0)
+FOR I=1 TO 480
+PSET(0,I)
+FOR J=1 TO I-1
+IF(POINT(J,I-1) AND 1)+(POINT(J-1,I-1) AND 1) AND 1 THEN PSET(J,I)
+NEXT
+PSET(I,I)
+NEXT

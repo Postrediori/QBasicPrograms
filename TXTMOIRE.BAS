@@ -1,0 +1,11 @@
+CLS
+FOR K%=0 TO 80 * 24 - 1
+J%=K%\80
+I%=K% MOD 80
+S&=J%*J%/20
+T&=I%*I%/50
+Z%=(S&+T&)MOD 40
+COLOR 10+Z%\8, Z% MOD 8
+PRINT CHR$(&HB1);
+NEXT
+COLOR 7

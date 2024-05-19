@@ -1,0 +1,15 @@
+SCREEN 12
+PAINT(1,1),7
+T=ATN(1)*8
+r0=0
+g0=64/3
+b0=64*2/3
+DO
+FOR i=0 TO 63
+r=INT(32+32*SIN(T*(i+r0)/64))
+g=INT(32+32*SIN(T*(i+g0)/64))
+b=INT(32+32*SIN(T*(i+b0)/64))
+LOCATE 2,2:PRINT "r=";r,"g=";g,"b=";b
+PALETTE 7,65536*b+256*g+r
+NEXT
+LOOP UNTIL INKEY$<>""

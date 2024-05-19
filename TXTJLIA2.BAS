@@ -1,0 +1,20 @@
+A=-.55
+B=-.55
+C$=CHR$(&HB1)
+FOR Y%=0 TO 12
+Y!=Y%*.085
+FOR X%=0 TO 79
+X!=X%*.05125-2.1
+C%=40
+r=X!
+I=Y!
+DO
+T=2*r*I+A
+r=r*r-I*I+B
+I=T
+C%=C%-1
+LOOP UNTIL C%=0 OR r*r+I*I>4
+COLOR 10+C%\8,C% MOD 8
+LOCATE 13+Y%,X%+1:PRINT C$;
+LOCATE 13-Y%,80-X%:PRINT C$;
+NEXT X%,Y%

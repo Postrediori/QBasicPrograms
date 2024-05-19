@@ -1,0 +1,19 @@
+SCREEN 12
+N=14
+u=0.448799
+r=900
+FOR i=0 TO N
+a=i*u/4
+x=r*COS(a)
+y=r*SIN(a)
+LINE(0,0)-(x,y),15
+B=a-u/8
+PAINT(90*COS(B),90*SIN(B)),i,15
+NEXT
+DO
+K=(K+1)MOD N
+FOR i=1 TO N
+j=i+K
+PALETTE i,65536*INT(32*(1+SIN(u*j)))+256*INT(32*(1+SIN(u*(j+4))))+INT(32*(1+SIN(u*(j+8))))
+NEXT
+LOOP UNTIL INKEY$<>""

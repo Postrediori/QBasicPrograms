@@ -1,0 +1,14 @@
+DIM t%(80)
+FOR X=1 TO 80
+t%(X)=INT(-50*RND)
+NEXT
+CLS
+1 FOR X%=1 TO 80
+IF t%(X%)>28 THEN t%(X%)=0
+t%(X%)=t%(X%)+1
+FOR Z%=0 TO 6
+COLOR ASC(MID$("ACCKKLA",Z%+1,1))-65,-2*(Z%=6)
+y%=t%(X%)-6+Z%
+IF y%>0 AND y%<24 THEN LOCATE y%,X%:PRINT CHR$(33+(X%*y%)MOD 200);
+NEXT Z%,X%
+GOTO 1

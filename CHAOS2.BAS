@@ -1,0 +1,17 @@
+SCREEN 12
+COLOR 3
+LOCATE 3,10
+PRINT "X    =RX (1-X )"
+LOCATE 4,10
+PRINT " n+1    n    n"
+COLOR 4
+LINE (40,20)-(40,430)
+LINE (40,430)-(540,430)
+FOR X%=40 TO 560
+r#=3+(X%-40)/520
+p#=.5
+FOR Y%=0 TO 50
+p#=p#*r#*(1-p#)
+IF Y%>14 THEN PSET(X%,INT(430-410*p#)),14
+NEXT
+NEXT

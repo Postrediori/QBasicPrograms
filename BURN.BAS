@@ -1,0 +1,7 @@
+REM http://pouet.net/prod.php?which=88237
+S$="b81211cd10bac903416bc1fcd0e0ee243fc0e802eed6eee2f06800b01f6bdb7580cb018a071287a200045a10e8d0f81cad43438807e460fec875e2c3"
+DIM prg%(60)
+FOR I%=0 TO 59
+POKE VARPTR(prg%(0))+I%,VAL("&H"+MID$(S$,I%*2+1,2))
+NEXT
+CALL ABSOLUTE(VARPTR(prg%(0)))
