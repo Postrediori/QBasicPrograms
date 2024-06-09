@@ -370,6 +370,11 @@ Simulations of particle scattering with RNG.
 ![FIBSPRL Screenshot](images/FIBSPRL.png)
 
 
+**[MATRIX.BAS](MATRIX.BAS)** - Falling letters in text mode.
+
+![MATRIX Screenshot](images/MATRIX.png)
+
+
 **[TXTMOIRE.BAS](TXTMOIRE.BAS)** - Moiré pattern in text mode.
 
 ![TXTMOIRE Screenshot](images/TXTMOIRE.png)
